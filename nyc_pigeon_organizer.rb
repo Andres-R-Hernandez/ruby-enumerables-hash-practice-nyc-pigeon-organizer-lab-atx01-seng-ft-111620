@@ -40,9 +40,6 @@ organized_data = {}
     unique_attributes << key
   end
 
-#Below code removes repeating attributes
-  unique_attributes.uniq!
-
 #Below code creates attribute hash with empty arrays
   unique_attributes_hash = {}
 

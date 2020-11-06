@@ -56,6 +56,7 @@ organized_data = {}
 
 #Below code uses a loop to add details to the arrays corresponding to the matching names and attributes from original data
 
+organized_data = {}
 count = 1
 data.each do |key, value|
   value.each do |detail, names|

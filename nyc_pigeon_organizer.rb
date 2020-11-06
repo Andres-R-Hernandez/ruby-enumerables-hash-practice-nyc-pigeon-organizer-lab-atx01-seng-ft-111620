@@ -41,7 +41,7 @@ organized_data = {}
   end
 
 #Below code creates attribute hash with empty arrays
-  organized_data = Hash[a.zip unique_attributes]
+  organized_data = Hash[unique_names.zip unique_attributes]
 
 
 #####

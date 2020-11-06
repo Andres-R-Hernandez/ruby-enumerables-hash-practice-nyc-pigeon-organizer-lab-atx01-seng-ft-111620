@@ -1,3 +1,4 @@
+=begin
 pigeon_data = {
   :color => {
     :purple => ["Theo", "Peter Jr.", "Lucky"],
@@ -41,10 +42,6 @@ organized_data = {}
   end
 
 #Below code creates attribute hash with empty arrays
-  organized_data = Hash[unique_names.zip unique_attributes]
-
-=begin
-#Below code creates attribute hash with empty arrays
   unique_attributes_hash = {}
 
   unique_attributes.each do |attribute|
@@ -55,11 +52,9 @@ organized_data = {}
   unique_names.each do |name|
     organized_data[name] = unique_attributes_hash
   end
-=end
 
 ### At this point we have a HoHoA with unique names and attributes associated with each name pointing to an empty array ###
 
-=begin
 #Below code uses a loop to add details to the arrays corresponding to the matching names and attributes from original data
 count = 1
   data.each do |key, value|
@@ -74,10 +69,26 @@ count = 1
       end
     end
   end
-=end
+
 #Below code returns new organized pigeon data
   organized_data
 
 end
 
 p nyc_pigeon_organizer(pigeon_data)
+=end
+def nyc_pigeon_organizer(data)
+  # write your code here!
+final_result = data.each_with_object({}) do |(key, value), final_array|
+  value.each do |inner_key, names|
+    names.each do |name|
+      if !final_array[name]
+        final_array[name] = {}
+      end
+      if !final_array[name][key]
+        final_array[name][key] = []
+      end
+      final_array[name][key] << inner_key.to_s
+    end
+  end  
+end

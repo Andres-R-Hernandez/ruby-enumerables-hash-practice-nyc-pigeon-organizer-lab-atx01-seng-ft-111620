@@ -1,23 +1,5 @@
 =begin
-pigeon_data = {
-  :color => {
-    :purple => ["Theo", "Peter Jr.", "Lucky"],
-    :grey => ["Theo", "Peter Jr.", "Ms. K"],
-    :white => ["Queenie", "Andrew", "Ms. K", "Alex"],
-    :brown => ["Queenie", "Alex"]
-  },
-  :gender => {
-    :male => ["Alex", "Theo", "Peter Jr.", "Andrew", "Lucky"],
-    :female => ["Queenie", "Ms. K"]
-  },
-  :lives => {
-    "Subway" => ["Theo", "Queenie"],
-    "Central Park" => ["Alex", "Ms. K", "Lucky"],
-    "Library" => ["Peter Jr."],
-    "City Hall" => ["Andrew"]
-  }
-}
-
+#First attempt at pigeon lab. Ran into an issue where my names were pointing to the same location in memory for the hash of attributes.
 def nyc_pigeon_organizer(data)
   # write your code here!
 
@@ -56,26 +38,19 @@ organized_data = {}
 ### At this point we have a HoHoA with unique names and attributes associated with each name pointing to an empty array ###
 
 #Below code uses a loop to add details to the arrays corresponding to the matching names and attributes from original data
-count = 1
   data.each do |key, value|
     value.each do |detail, names|
       p names
       names.each do |name|
-        print count, " ", key, " ", detail, " ", name, " ", organized_data[name][key], "\n"
         organized_data[name][key] << detail.to_s
-        p organized_data[name][key]
-        puts "\n"
-        count += 1
       end
     end
   end
 
 #Below code returns new organized pigeon data
   organized_data
-
 end
 
-p nyc_pigeon_organizer(pigeon_data)
 =end
 def nyc_pigeon_organizer(data)
   # write your code here!

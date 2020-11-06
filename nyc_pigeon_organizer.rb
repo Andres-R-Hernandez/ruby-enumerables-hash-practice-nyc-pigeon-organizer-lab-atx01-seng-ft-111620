@@ -65,6 +65,7 @@ data.each do |key, value|
     names.each do |name|
     print name, detail, key, "\n"
     organized_data[name][key] << count
+    p organized_data
     count += 1
     end
   end

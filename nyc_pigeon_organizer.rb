@@ -39,7 +39,7 @@ organized_data = {}
   data.each do |key, value|
     unique_attributes << key
   end
-
+=begin
 #Below code creates attribute hash with empty arrays
   unique_attributes_hash = {}
 
@@ -51,7 +51,7 @@ organized_data = {}
   unique_names.each do |name|
     organized_data[name] = unique_attributes_hash
   end
-
+=end
 ### At this point we have a HoHoA with unique names and attributes associated with each name pointing to an empty array ###
 
 #Below code uses a loop to add details to the arrays corresponding to the matching names and attributes from original data

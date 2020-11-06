@@ -59,6 +59,7 @@ organized_data = {}
 
 ### At this point we have a HoHoA with unique names and attributes associated with each name pointing to an empty array ###
 
+=begin
 #Below code uses a loop to add details to the arrays corresponding to the matching names and attributes from original data
 count = 1
   data.each do |key, value|
@@ -73,7 +74,7 @@ count = 1
       end
     end
   end
-
+=end
 #Below code returns new organized pigeon data
   organized_data
 

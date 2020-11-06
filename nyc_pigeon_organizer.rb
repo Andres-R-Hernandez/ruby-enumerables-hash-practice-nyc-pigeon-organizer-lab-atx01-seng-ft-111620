@@ -64,9 +64,9 @@ data.each do |key, value|
       #print name, detail, key, "\n"
       if count == 0
         organized_data[name][unique_attributes[count]] = []
-        organized_data[name][unique_attributes[count]][count] = detail.to_ss
+        organized_data[name][unique_attributes[count]][count] = detail.to_s
       else
-        organized_data[name][unique_attributes[count]][count] = detail.to_ss
+        organized_data[name][unique_attributes[count]][count] = detail.to_s
       end
       count += 1
     end

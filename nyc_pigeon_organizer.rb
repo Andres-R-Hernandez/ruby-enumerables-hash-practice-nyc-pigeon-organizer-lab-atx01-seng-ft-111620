@@ -57,18 +57,18 @@ organized_data = {}
 #Below code uses a loop to add details to the arrays corresponding to the matching names and attributes from original data
 
 organized_data = {}
-count = 0
 data.each do |key, value|
   value.each do |detail, names|
+    count = 0
     names.each do |name|
-    print name, detail, key, "\n"
-    if count == 0
-      organized_data[name][unique_attributes[count]] = []
-      organized_data[name][unique_attributes[count]][count] = detail.to_s
-    else
-      organized_data[name][unique_attributes[count]]
-    end
-    count += 1
+      print name, detail, key, "\n"
+      if count == 0
+        organized_data[name][unique_attributes[count]] = []
+        organized_data[name][unique_attributes[count]][count] = detail.to_s
+      else
+        organized_data[name][unique_attributes[count]]
+      end
+      count += 1
     end
   end
 end

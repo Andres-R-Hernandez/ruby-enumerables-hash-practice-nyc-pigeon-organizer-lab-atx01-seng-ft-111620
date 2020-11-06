@@ -62,7 +62,7 @@ data.each do |key, value|
   value.each do |detail, names|
     names.each do |name|
     print name, detail, key, "\n"
-    organized_data[name][unique_attributes[count]] << count
+    organized_data[name][unique_attributes[count]] << detail.to_s
     p organized_data
     count += 1
     end

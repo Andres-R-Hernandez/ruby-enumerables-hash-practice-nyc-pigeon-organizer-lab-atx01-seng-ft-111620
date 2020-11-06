@@ -47,7 +47,7 @@ organized_data = {}
   unique_attributes_hash = {}
 
   unique_attributes.each do |attribute|
-    unique_attributes_hash[attribute] = []
+    unique_attributes_hash[attribute.to_s] = []
   end
 
 #Below code creates a HoHoA with the unique names and attributes
@@ -64,7 +64,7 @@ data.each do |key, value|
   value.each do |detail, names|
     names.each do |name|
     print name, detail, key, "\n"
-    organized_data[name][key] << count
+    organized_data[name][key.to_s] << count
     p organized_data
     count += 1
     end

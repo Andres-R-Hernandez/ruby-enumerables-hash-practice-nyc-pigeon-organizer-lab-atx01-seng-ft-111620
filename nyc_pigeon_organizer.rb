@@ -63,7 +63,8 @@ data.each do |key, value|
     names.each do |name|
     print name, detail, key, "\n"
     if count == 0
-    organized_data[name][unique_attributes[count]] = detail.to_s
+    organized_data[name][unique_attributes[count]] = []
+    organized_data[name][unique_attributes[count]][count] = detail.to_s
     p organized_data
     count += 1
     end
